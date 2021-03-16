@@ -1,0 +1,9 @@
+package com.example.demo.cmm.domain;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RequestController
+@RequestMapping
+public class Common {
+
+}
