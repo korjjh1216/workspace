@@ -1,0 +1,7 @@
+package com.example.demo.uss.service;
+
+
+
+@Service
+public class AdminServiceImpl  {
+}

@@ -1,0 +1,31 @@
+package com.example.demo.uss.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import com.example.demo.uss.domain.User;
+
+public interface  UserService {
+
+    public Optional<User> findOne(User user);
+    public List<User> findAll();
+    public Optional<User> findById(long id);
+    public List<User> findAllById(Iterable<User> ids);
+
+
+    public long count();
+    
+    public void deleteById(long id);
+   
+
+    public User getOne(long id);
+
+    public boolean existsById(long id);
+
+    public void flush();
+
+    public List<User> saveAll(Iterable<User> entities);
+    public User saveAndFlush(User entity);
+    public User save(User entity);
+
+}

@@ -1,0 +1,11 @@
+ package com.example.demo.cmm.util;
+
+import java.util.function.Consumer;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Proxy {
+	public static Consumer<String> print = System.out::print;
+	
+}

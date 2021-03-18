@@ -1,0 +1,26 @@
+ package com.example.demo.cmm.util;
+
+import java.util.function.BiFunction;
+import java.util.function.Consumer;
+import java.util.function.Function;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Proxy {
+	public static Consumer<String> print = System.out::print;
+	public  Function<Object, String> string = String::valueOf;
+	public  Function<String, Integer> strToInt = Integer::parseInt; 
+	
+	public Function<Double,Double> doubleabs = Math :: abs;
+	public Function<Float,Float> floatabs = Math :: abs;
+	public Function<Integer, Integer> intabs = Math :: abs;
+	public Function<Long, Long> longabs = Math :: abs;
+	
+	public Function<Double, Double> doubleceil = Math :: ceil;
+	public Function<Double, Double> doublefloor = Math :: floor;
+	
+	public static BiFunction<Double,Double, Double> doublemax = Math :: max;
+	
+	/* public Function<Double, Integer> Rand = Math :: random; */
+}
