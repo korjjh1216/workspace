@@ -6,37 +6,38 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+
 @Data
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name="User")
-public class User {
+public class User  {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="user_no")
 	private long userNo;
 	
-	 @Column(name = "username")
-	    private String username;
+	@Column(name = "username")
+	private String username;
 
-	    @Column(name = "password")
-	    private String password;
-
-	    @Column(name = "enabled")
-	    private boolean enabled;
-	    
-	    @Column(name = "name")
-	    private boolean name;
-	    
-	    @Column(name = "email")
-	    private boolean email;
-	    
-	    @Column(name = "birthday")
-	    private boolean birthday;
-	    
-	    @Column(name = "gender")
-	    private boolean gender;
+	@Column(name = "password")
+	private String password;
+	
+	@Column(name = "authority")
+	private String authority;
+	
+	@Column(name = "name")
+	private String name;
+	
+	@Column(name = "email")
+	private String email;
+	
+	@Column(name = "birthday")
+	private String birthday;
+	
+	@Column(name = "gender")
+	private String gender;
 
 	}

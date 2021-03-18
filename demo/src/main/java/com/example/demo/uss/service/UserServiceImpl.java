@@ -2,6 +2,7 @@ package com.example.demo.uss.service;
 
 import com.example.demo.cmm.service.AbstractService;
 import com.example.demo.uss.domain.User;
+import com.example.demo.uss.domain.UserDto;
 import com.example.demo.uss.repository.UserRepository;
 
 import java.util.List;
@@ -70,11 +71,16 @@ public class UserServiceImpl extends AbstractService<User> implements UserServic
 	//UserdietailsService 메서드
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		User user = repo.findByUsername(username);
+		UserDto user = repo.findByUsername(username);
 		if (user == null) {
             throw new UsernameNotFoundException(String.format("No user found with username '%s'.", username));
         } else {
             return user;
         }
+	}
+	@Override
+	public UserDto login(String username, String password) {
+		
+		return repo.login(username,password);
 	}
 }
