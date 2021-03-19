@@ -9,3 +9,4 @@
 1616038255335	Move compilation unit
 1616043000140	Rename type 'SecurityConfig'
 1616044027247	Rename type 'jwtTokenProvider'
+1616126323254	Rename type 'AbstractController'

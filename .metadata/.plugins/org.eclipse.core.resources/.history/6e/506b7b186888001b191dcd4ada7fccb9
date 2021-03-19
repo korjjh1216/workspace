@@ -5,7 +5,6 @@ import java.util.Map;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,13 +15,6 @@ import com.example.demo.uss.domain.UserDto;
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
-	
-	@GetMapping("/insertMany")
-	public String insertMany() {
-		
-		return "100";
-	}
-	
 	@PostMapping("/login")
 	public ResponseEntity<?> login(@RequestBody UserDto user) {
 		Map<String, Object> map =new HashMap<>();
