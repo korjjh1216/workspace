@@ -1,8 +1,0 @@
-package com.example.demo.sec.config;
-
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-
-@Congfiguration
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
-
-}

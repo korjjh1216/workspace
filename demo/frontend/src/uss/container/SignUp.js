@@ -5,14 +5,26 @@ import axios from 'axios'
 const SignUp = () =>{
   const insertMany = () =>{
     alert(`더미데이터 입력`)
-    axios.get(`/auth/insertMany`)
+    axios.get(`http://localhost:8080/auth/insertMany`)
     .then(res => {
-      alert(`${res.data.mesage}명 등록됨`)
-    })
+      res.header(defaultCorsHeaders)
+      res.send(`/auth/insertMany`)
+      console.log(`${res.data.message} 등록됨`)
+  })
     .catch(err => {
       alert(`FAILURE`)
     })
   }
+  
+  const defaultCorsHeaders = {
+    "Cross-Origin-Embedder-Policy": "require-corp",
+    "Cross-Origin-Opener-Policy": "unsafe-none",
+    "Cross-Origin-Resource-Policy": "cross-origin"
+};
+
+
+
+
    return(<>
       <form style={{border:"1px solid #ccc"}}>
     <div className="container">
